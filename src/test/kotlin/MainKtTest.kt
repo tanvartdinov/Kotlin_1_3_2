@@ -101,4 +101,15 @@ class MainKtTest {
 
         assertEquals(expected, actual)
     }
+
+    @Test
+    fun testWithBrokenBuild() {
+        val amount = 100_000
+        val cardType = "Mastercard"
+
+        val actual = transfer(amount, cardType = cardType)
+        val expected = 0
+
+        assertEquals(expected, actual)
+    }
 }
